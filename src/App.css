@@ -1,38 +1,169 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* cyan - #93E6C4*/
+:root{
+  --cyan: #93E6C4;
+  --lightblue: #E9EEF3;
+  --lightred: #ECA4A7;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button{
+  border: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button:hover{
+  cursor: pointer;
+}
+
+.layoutContainer{
+  background: var(--lightblue);
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar{
+  width: 350px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0px 0px 10px  grey;
+}
+
+.content{
+  width: 100%;
+}
+
+/*--- common card css---*/
+.cardContainer{
+  border-radius: 10px;
+  box-shadow: 0 0 5px grey;
+  background: white;
+  padding: 20px;
+}
+
+/*----- sidebar css-----*/
+.sidebarWrapper{
+  padding: 30px;
+}
+
+.sidebarCardBox{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 30px;
+}
+.profileCard{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  gap: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.profileImgBox{
+  width: 40px;
+  height: 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.profileCardSubTitle{
+  font-size: 0.9em;
+  font-weight: 400;
 }
+
+.toggleCardContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.HeadingToggle{
+  background: var(--cyan);
+  padding: 15px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.HeadingToggle:active, .cardListToggle:active {
+  background: var(--cyan);
+}
+
+.HeadingToggle:hover, .cardListToggle:hover {
+  background: var(--cyan);
+}
+
+.cardListToggle{
+  padding: 15px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.feedbackCardContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.feedbackCardContainer h2{
+  font-size: 1.3em;
+}
+
+.feedbackBtn{
+  border-radius: 10px;
+  padding: 15px;
+  background: var(--cyan);
+  width: 100%;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+/*===== common modal css =====*/
+.modalContainer{
+  position: fixed;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+/*============================*/
+/*===== feedback form css =====*/
+.feedbackFormContainer{
+background: var(--lightblue);
+width: 80%;
+height: 100vh;
+border-radius: 20px;
+display: flex;
+gap: 30px;
+padding: 30px;
+}
+
+.feedbackLeft{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 350px;
+}
+
+.feedbackBtnActive{
+  background: var(--lightred);
+}
+
+.feedbackRight{
+  width: 100%;
+}
+
+.feedbackFormBox{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input{
+  border: none;
+  height: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 8px;
+}
+/*============================*/
